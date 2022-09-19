@@ -9,7 +9,7 @@ const[edit,setEdit]=useState({})
     }, [])
     
     const fetchData=()=>{
-        axios.get("https://dhiwisetask.herokuapp.com/table")
+        axios.get("http://localhost:5000/table")
         .then((res)=>{
             console.log(res.data)
             setData(res.data)
@@ -18,12 +18,12 @@ const[edit,setEdit]=useState({})
     const handleEdit=(e)=>{
 setEdit({...edit,level:e.level,value:e.value,id:e.id})
     }
-    const handlePatch=()=>{
-      axios.patch("https://dhiwisetask.herokuapp.com/table?id="+edit.id,{value:edit.value,level:edit.level})
-      .then((res)=>{
-        fetchData()
-      })
-    }
+    // const handlePatch=()=>{
+    //   axios.patch("https://dhiwisetask.herokuapp.com/table?id="+edit.id,{value:edit.value,level:edit.level})
+    //   .then((res)=>{
+    //     fetchData()
+    //   })
+    // }
 
   return (
     <div>MainTable
