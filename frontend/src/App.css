@@ -2,9 +2,15 @@ table{
   text-align: center;
   border: 1px solid;
 }
-table>tr{
+tr{
   display: table-row;
   width: 1300px;
   text-align: center;
   border: 1px solid;
+}
+td{
+  color:white;
+}
+td:hover{
+background-color: black;
 }
